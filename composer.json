@@ -1,0 +1,13 @@
+{
+    "name": "timmy/brain-games",
+    "authors": [
+        {
+            "name": "Timofei Tverdokhlebov",
+            "email": "great.timofey@icloud.com"
+        }
+    ],
+    "bin": [
+      "bin/brain-games"
+    ],
+    "require": {}
+}

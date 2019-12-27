@@ -4,4 +4,4 @@
 
 This readme has been created just for badges and lulz
 
-<img src="https://media.giphy.com/media/H7YaijxnCgRedSpKkh/giphy.gif" />
+[![asciicast](https://asciinema.org/a/g2D6DU0JWnLMr4JMB5jHJicvY.svg)](https://asciinema.org/a/g2D6DU0JWnLMr4JMB5jHJicvY)

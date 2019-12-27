@@ -7,11 +7,13 @@
         }
     ],
     "bin": [
-      "bin/brain-games"
+      "bin/brain-games",
+      "bin/brain-even"
     ],
     "autoload": {
       "files": [
-        "src/cli.php"
+        "src/cli.php",
+        "src/game.php"
       ]
     },
     "require": {

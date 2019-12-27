@@ -3,3 +3,5 @@
 <img src="https://travis-ci.org/great-timofey/php-project-lvl1.svg?branch=master" alt="Build Status" />
 
 This readme has been created just for badges and lulz
+
+<img src="https://media.giphy.com/media/H7YaijxnCgRedSpKkh/giphy.gif" />

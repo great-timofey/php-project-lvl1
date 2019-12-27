@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'be01b9b16925dcb22165c40b46681ac6' => $vendorDir . '/wp-cli/php-cli-tools/lib/cli/cli.php',
     '3223c8af41bd911426b269d4519a84ee' => $baseDir . '/src/cli.php',
+    'b68578c1109b5efb348792117c98fd9a' => $baseDir . '/src/game.php',
 );

@@ -9,6 +9,7 @@ class ComposerStaticInitad039b57cda781837666bd28a72aea7d
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
         '3223c8af41bd911426b269d4519a84ee' => __DIR__ . '/../..' . '/src/cli.php',
+        'b68578c1109b5efb348792117c98fd9a' => __DIR__ . '/../..' . '/src/game.php',
     );
 
     public static $prefixesPsr0 = array (

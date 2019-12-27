@@ -19,7 +19,7 @@ function run()
 
         line("Question: {$randomNumber}");
 
-        $answer = prompt("Your answer: ");
+        $answer = prompt("Your answer");
 
         if ($answer !== $correctAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");

@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'be01b9b16925dcb22165c40b46681ac6' => $vendorDir . '/wp-cli/php-cli-tools/lib/cli/cli.php',
-    '3223c8af41bd911426b269d4519a84ee' => $baseDir . '/src/cli.php',
-    'b68578c1109b5efb348792117c98fd9a' => $baseDir . '/src/game.php',
+    'c9efd6bdc8949d9b7630cee9973ed13a' => $baseDir . '/src/game-engine.php',
+    '4e435e1fbf8b4d4f9821ab6c9484ae87' => $baseDir . '/src/games/even.php',
+    '8e7f8861dbbff8d07155d9f9aab6c885' => $baseDir . '/src/games/calc.php',
 );

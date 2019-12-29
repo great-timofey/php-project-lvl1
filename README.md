@@ -5,3 +5,4 @@
 This readme has been created just for badges and lulz
 
 [![asciicast](https://asciinema.org/a/g2D6DU0JWnLMr4JMB5jHJicvY.svg)](https://asciinema.org/a/g2D6DU0JWnLMr4JMB5jHJicvY)
+[![asciicast](https://asciinema.org/a/UWXHh5KmTWQowVLKUuTWhorIs.svg)](https://asciinema.org/a/UWXHh5KmTWQowVLKUuTWhorIs)

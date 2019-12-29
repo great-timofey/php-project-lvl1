@@ -8,8 +8,9 @@ class ComposerStaticInitad039b57cda781837666bd28a72aea7d
 {
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
-        '3223c8af41bd911426b269d4519a84ee' => __DIR__ . '/../..' . '/src/cli.php',
-        'b68578c1109b5efb348792117c98fd9a' => __DIR__ . '/../..' . '/src/game.php',
+        'c9efd6bdc8949d9b7630cee9973ed13a' => __DIR__ . '/../..' . '/src/game-engine.php',
+        '4e435e1fbf8b4d4f9821ab6c9484ae87' => __DIR__ . '/../..' . '/src/games/even.php',
+        '8e7f8861dbbff8d07155d9f9aab6c885' => __DIR__ . '/../..' . '/src/games/calc.php',
     );
 
     public static $prefixesPsr0 = array (

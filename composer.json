@@ -2,18 +2,19 @@
     "name": "timmy/brain-games",
     "authors": [
         {
-            "name": "Timofei Tverdokhlebov",
-            "email": "great.timofey@icloud.com"
+          "name": "Timofei Tverdokhlebov",
+          "email": "great.timofey@icloud.com"
         }
     ],
     "bin": [
-      "bin/brain-games",
-      "bin/brain-even"
+      "bin/brain-even",
+      "bin/brain-calc"
     ],
     "autoload": {
       "files": [
-        "src/cli.php",
-        "src/game.php"
+        "src/game-engine.php",
+        "src/games/even.php",
+        "src/games/calc.php"
       ]
     },
     "require": {
@@ -23,6 +24,7 @@
         "squizlabs/php_codesniffer": "^3.4"
     },
     "scripts": {
-      "phpcs": "./vendor/bin/phpcs"
+      "phpcs": "./vendor/bin/phpcs",
+      "phpcbf": "./vendor/bin/phpcbf"
     }
 }

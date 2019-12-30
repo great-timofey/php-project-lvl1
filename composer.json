@@ -8,13 +8,15 @@
     ],
     "bin": [
       "bin/brain-even",
-      "bin/brain-calc"
+      "bin/brain-calc",
+      "bin/brain-gcd"
     ],
     "autoload": {
       "files": [
         "src/game-engine.php",
         "src/games/even.php",
-        "src/games/calc.php"
+        "src/games/calc.php",
+        "src/games/gcd.php"
       ]
     },
     "require": {

@@ -11,6 +11,9 @@ function getGame(string $gameName)
         case 'calc':
             return \Braingames\Games\Calc\getGameAttributes();
 
+        case 'gcd':
+            return \Braingames\Games\Gcd\getGameAttributes();
+
         case 'even':
             return \Braingames\Games\Even\getGameAttributes();
 

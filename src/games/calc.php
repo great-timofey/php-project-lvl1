@@ -10,21 +10,14 @@ function getGameAttributes()
 {
 
     $rules = "What is the result of the expression?";
+    $operations = ['+' => fn($a, $b) => $a + $b, '-' => fn($a, $b) => $a - $b, '*' => fn($a, $b) => $a * $b];
 
-    $operands = ['+' => function ($a, $b) {
-        return $a + $b;
-    }, '-' => function ($a, $b) {
-        return $a - $b;
-    }, '*' => function ($a, $b) {
-        return $a * $b;
-    }];
-
-    $step = function () use ($operands) {
+    $step = function () use ($operations) {
         $firstNumber = rand(1, 10);
         $secondNumber = rand(1, 10);
-        $operand = array_keys($operands)[rand(0, 2)];
+        $operand = array_keys($operations)[rand(0, 2)];
 
-        $closure = $operands[$operand];
+        $closure = $operations[$operand];
 
         $question = "{$firstNumber} {$operand} {$secondNumber}";
         $answer = $closure($firstNumber, $secondNumber);

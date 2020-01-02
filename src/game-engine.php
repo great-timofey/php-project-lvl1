@@ -17,6 +17,9 @@ function getGame(string $gameName)
         case 'even':
             return \Braingames\Games\Even\getGameAttributes();
 
+        case 'progression':
+            return \Braingames\Games\Progression\getGameAttributes();
+
         default:
             return 'Error! Game with this name does not exist.';
     }

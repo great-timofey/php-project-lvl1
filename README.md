@@ -15,3 +15,6 @@ This readme has been created just for badges and lulz 😂
 
 ## Greatest Common Divisor: find GCD for two numbers
 [![asciicast](https://asciinema.org/a/gkx5wZYnjtXbjyCLdoBAutrzB.svg)](https://asciinema.org/a/gkx5wZYnjtXbjyCLdoBAutrzB)
+
+## Progression: find missed member of a progression
+[![asciicast](https://asciinema.org/a/TbZKgOCjLCbTdy1tnyQdlEPXX.svg)](https://asciinema.org/a/TbZKgOCjLCbTdy1tnyQdlEPXX)

@@ -11,4 +11,5 @@ return array(
     '4e435e1fbf8b4d4f9821ab6c9484ae87' => $baseDir . '/src/games/even.php',
     '8e7f8861dbbff8d07155d9f9aab6c885' => $baseDir . '/src/games/calc.php',
     '5c70933327b78fd5d7370e442816202c' => $baseDir . '/src/games/gcd.php',
+    'fcae0b2a8d56af0edafd672d0f1cb4a1' => $baseDir . '/src/games/progression.php',
 );

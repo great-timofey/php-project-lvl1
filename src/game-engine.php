@@ -29,9 +29,7 @@ function run(string $gameName)
 {
     line("Welcome to the Brain Games!\n");
 
-    $game = getGame($gameName);
-    $rules = $game['rules'];
-    $generateStep = $game['step'];
+    ['rules' => $rules, 'step' => $generateStep] = getGame($gameName);
 
     line($rules);
 
@@ -40,13 +38,10 @@ function run(string $gameName)
 
 
     for ($i = 0; $i < 3; $i++) {
-        $currentGameStep = $generateStep();
-        $gameQuestion = $currentGameStep['question'];
+        ['question' => $gameQuestion, 'answer' => $gameAnswer] = $generateStep();
 
         line("Question: {$gameQuestion}");
         $answer = prompt("Your answer");
-
-        $gameAnswer = $currentGameStep['answer'];
 
         if ($gameAnswer != $answer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$gameAnswer}'.");

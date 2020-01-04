@@ -1,38 +1,15 @@
 <?php
 
-namespace Braingames\Core;
+namespace Braingames\GameEngine;
 
 use function \cli\line;
 use function \cli\prompt;
 
-function getGame(string $gameName)
-{
-    switch ($gameName) {
-        case 'calc':
-            return \Braingames\Games\Calc\getGameAttributes();
-
-        case 'gcd':
-            return \Braingames\Games\Gcd\getGameAttributes();
-
-        case 'even':
-            return \Braingames\Games\Even\getGameAttributes();
-
-        case 'progression':
-            return \Braingames\Games\Progression\getGameAttributes();
-
-        case 'prime':
-            return \Braingames\Games\Prime\getGameAttributes();
-
-        default:
-            return 'Error! Game with this name does not exist.';
-    }
-}
-
-function run(string $gameName)
+function run(array $game)
 {
     line('Welcome to the Brain Games!');
 
-    ['rules' => $rules, 'step' => $generateStep] = getGame($gameName);
+    ['rules' => $rules, 'step' => $generateStep] = $game;
 
     line($rules . "\n");
 

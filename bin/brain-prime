@@ -10,4 +10,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-Braingames\Core\run('prime');
+$game = Braingames\Games\Prime\getGameAttributes();
+
+Braingames\GameEngine\run($game);

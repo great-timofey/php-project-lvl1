@@ -18,3 +18,6 @@ This readme has been created just for badges and lulz 😂
 
 ## Progression: find missed member of a progression
 [![asciicast](https://asciinema.org/a/TbZKgOCjLCbTdy1tnyQdlEPXX.svg)](https://asciinema.org/a/TbZKgOCjLCbTdy1tnyQdlEPXX)
+
+## Prime: is number prime or it isn't?
+[![asciicast](https://asciinema.org/a/TNYDF8lJ85Zr9ghczmYBX1uJj.svg)](https://asciinema.org/a/TNYDF8lJ85Zr9ghczmYBX1uJj)

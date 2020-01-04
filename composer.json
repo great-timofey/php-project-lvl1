@@ -6,6 +6,13 @@
           "email": "great.timofey@icloud.com"
         }
     ],
+    "description": "Set of console games",
+    "type": "library",
+    "keywords": [
+      "game",
+      "console",
+      "fun"
+    ],
     "bin": [
       "bin/brain-even",
       "bin/brain-calc",

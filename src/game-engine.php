@@ -20,6 +20,9 @@ function getGame(string $gameName)
         case 'progression':
             return \Braingames\Games\Progression\getGameAttributes();
 
+        case 'prime':
+            return \Braingames\Games\Prime\getGameAttributes();
+
         default:
             return 'Error! Game with this name does not exist.';
     }
@@ -27,14 +30,14 @@ function getGame(string $gameName)
 
 function run(string $gameName)
 {
-    line("Welcome to the Brain Games!\n");
+    line('Welcome to the Brain Games!');
 
     ['rules' => $rules, 'step' => $generateStep] = getGame($gameName);
 
-    line($rules);
+    line($rules . "\n");
 
-    $name = prompt("May I have your name?");
-    line("Hello, {$name}!");
+    $name = prompt('May I have your name?');
+    line("Hello, {$name}!\n");
 
 
     for ($i = 0; $i < 3; $i++) {

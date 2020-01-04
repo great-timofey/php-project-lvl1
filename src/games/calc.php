@@ -15,7 +15,9 @@ function getGameAttributes()
     $step = function () use ($operations) {
         $firstNumber = rand(1, 10);
         $secondNumber = rand(1, 10);
-        $operand = array_keys($operations)[rand(0, 2)];
+        $randomOperationIndex = rand(0, 2);
+
+        $operand = array_keys($operations)[$randomOperationIndex];
 
         $closure = $operations[$operand];
 

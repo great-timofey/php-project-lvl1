@@ -12,8 +12,9 @@ function getGameAttributes()
     $step = function () {
         $number = rand(0, 100);
         $answer = 'yes';
+        $smallPrimeNumbers = [0, 1];
 
-        if (in_array($number, [0, 1])) {
+        if (in_array($number, $smallPrimeNumbers)) {
             $answer = 'no';
         } else {
             for ($i = 2; $i < $number; $i++) {

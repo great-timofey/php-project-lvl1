@@ -12,7 +12,7 @@ function getGameAttributes()
 
     $step = function () use ($sequenceLength) {
         $answer = 0;
-        $initialNumber = rand(0, 20);
+        $initialNumber = rand(0, 10);
         $sequenceStep = rand(2, 10);
         $indexOfMissed = rand(0, $sequenceLength);
         $question = '';

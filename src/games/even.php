@@ -2,11 +2,9 @@
 
 namespace Braingames\Games\Even;
 
-$rules = 'Answer "yes" if the number is even, otherwise answer "no"';
-
 function getGameAttributes()
 {
-    global $rules;
+    $rules = 'Answer "yes" if the number is even, otherwise answer "no"';
 
     $isEven = fn(int $a) => $a % 2 === 0;
 

@@ -2,11 +2,9 @@
 
 namespace Braingames\Games\Progression;
 
-$rules = 'What number is missing in the progression?';
-
 function getGameAttributes()
 {
-    global $rules;
+    $rules = 'What number is missing in the progression?';
     $sequenceLength = 10;
 
     $step = function () use ($sequenceLength) {

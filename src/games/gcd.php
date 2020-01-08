@@ -2,11 +2,9 @@
 
 namespace Braingames\Games\Gcd;
 
-$rules = 'Find the greatest common divisor of given numbers.';
-
 function getGameAttributes()
 {
-    global $rules;
+    $rules = 'Find the greatest common divisor of given numbers.';
 
     $findGcd = function (int $first, int $second) {
         $lessValue = $first < $second ? $first : $second;

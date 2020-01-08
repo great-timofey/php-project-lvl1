@@ -2,11 +2,9 @@
 
 namespace Braingames\Games\Calc;
 
-$rules = "What is the result of the expression?";
-
 function getGameAttributes()
 {
-    global $rules;
+    $rules = "What is the result of the expression?";
     $operations = ['+' => fn($a, $b) => $a + $b, '-' => fn($a, $b) => $a - $b, '*' => fn($a, $b) => $a * $b];
 
     $step = function () use ($operations) {

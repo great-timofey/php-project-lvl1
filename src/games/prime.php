@@ -2,12 +2,10 @@
 
 namespace Braingames\Games\Prime;
 
-$rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
 function getGameAttributes()
 {
 
-    global $rules;
+    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
     $step = function () {
         $number = rand(0, 100);

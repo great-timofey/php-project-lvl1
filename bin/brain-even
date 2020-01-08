@@ -10,7 +10,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$game = Braingames\Games\Even\getGameAttributes();
+Braingames\Games\Even\run();
 
-Braingames\GameEngine\run($game);
 

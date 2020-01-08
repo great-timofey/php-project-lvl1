@@ -2,12 +2,12 @@
 
 namespace Braingames\Games\Prime;
 
-use function \cli\line;
-use function \cli\prompt;
+$rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function getGameAttributes()
 {
-    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+    global $rules;
 
     $step = function () {
         $number = rand(0, 100);
@@ -29,4 +29,10 @@ function getGameAttributes()
     };
 
     return ['rules' => $rules, 'step' => $step];
+}
+
+function run()
+{
+    $game = getGameAttributes();
+    \Braingames\GameEngine\startGame($game);
 }

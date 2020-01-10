@@ -5,7 +5,7 @@ namespace Braingames\GameEngine;
 use function \cli\line;
 use function \cli\prompt;
 
-function run(array $game)
+function startGame(array $game)
 {
     line('Welcome to the Brain Games!');
 
@@ -16,8 +16,10 @@ function run(array $game)
     $name = prompt('May I have your name?');
     line("Hello, {$name}!\n");
 
+    $stages = 3;
 
-    for ($i = 0; $i < 3; $i++) {
+
+    for ($i = 0; $i < $stages; $i++) {
         ['question' => $gameQuestion, 'answer' => $gameAnswer] = $generateStep();
 
         line("Question: {$gameQuestion}");

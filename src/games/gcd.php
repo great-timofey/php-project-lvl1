@@ -2,16 +2,11 @@
 
 namespace Braingames\Games\Gcd;
 
-use function \cli\line;
-use function \cli\prompt;
-
 function getGameAttributes()
 {
     $rules = 'Find the greatest common divisor of given numbers.';
 
-    $step = function () {
-        $first = rand(1, 100);
-        $second = rand(1, 100);
+    $findGcd = function (int $first, int $second) {
         $lessValue = $first < $second ? $first : $second;
         $answer = 1;
 
@@ -21,8 +16,23 @@ function getGameAttributes()
             }
         }
 
+        return $answer;
+    };
+
+    $step = function () use ($findGcd) {
+        $first = rand(1, 100);
+        $second = rand(1, 100);
+
+        $answer = $findGcd($first, $second);
+
         return ['question' => "{$first} {$second}", 'answer' => $answer];
     };
 
     return ['rules' => $rules, 'step' => $step];
+}
+
+function run()
+{
+    $game = getGameAttributes();
+    \Braingames\GameEngine\startGame($game);
 }

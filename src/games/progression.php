@@ -2,13 +2,10 @@
 
 namespace Braingames\Games\Progression;
 
-use function \cli\line;
-use function \cli\prompt;
-
 function getGameAttributes()
 {
     $rules = 'What number is missing in the progression?';
-    $sequenceLength = 9;
+    $sequenceLength = 10;
 
     $step = function () use ($sequenceLength) {
         $answer = 0;
@@ -29,8 +26,14 @@ function getGameAttributes()
             }
         }
 
-        return ['question' => trim($question), 'answer' => $answer];
+        return ['question' => $question, 'answer' => $answer];
     };
 
     return ['rules' => $rules, 'step' => $step];
+}
+
+function run()
+{
+    $game = getGameAttributes();
+    \Braingames\GameEngine\startGame($game);
 }

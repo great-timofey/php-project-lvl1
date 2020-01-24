@@ -1,6 +1,7 @@
 <?php
 
 namespace Braingames\Games\Gcd;
+use function \Braingames\GameEngine\startGame;
 
 function getGameAttributes()
 {
@@ -8,31 +9,31 @@ function getGameAttributes()
 
     $findGcd = function (int $first, int $second) {
         $lessValue = $first < $second ? $first : $second;
-        $answer = 1;
+        $greatestCommonDivisor = 1;
 
-        for ($i = $answer + 1; $i <= $lessValue; $i++) {
+        for ($i = $greatestCommonDivisor + 1; $i <= $lessValue; $i++) {
             if ($first % $i === 0 && $second % $i === 0) {
-                $answer = $i;
+                $greatestCommonDivisor = $i;
             }
         }
 
-        return $answer;
+        return $greatestCommonDivisor;
     };
 
-    $step = function () use ($findGcd) {
+    $generateStep = function () use ($findGcd) {
         $first = rand(1, 100);
         $second = rand(1, 100);
 
-        $answer = $findGcd($first, $second);
+        $greatestCommonDivisor = $findGcd($first, $second);
 
-        return ['question' => "{$first} {$second}", 'answer' => $answer];
+        return ['question' => "{$first} {$second}", 'answer' => $greatestCommonDivisor];
     };
 
-    return ['rules' => $rules, 'step' => $step];
+    return ['rules' => $rules, 'generateStep' => $generateStep];
 }
 
 function run()
 {
     $game = getGameAttributes();
-    \Braingames\GameEngine\startGame($game);
+    startGame($game);
 }

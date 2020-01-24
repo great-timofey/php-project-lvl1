@@ -9,17 +9,16 @@ function startGame(array $game)
 {
     line('Welcome to the Brain Games!');
 
-    ['rules' => $rules, 'step' => $generateStep] = $game;
+    ['rules' => $rules, 'generateStep' => $generateStep] = $game;
 
     line($rules . "\n");
 
     $name = prompt('May I have your name?');
     line("Hello, {$name}!\n");
 
-    $stages = 3;
+    $stagesCount = 3;
 
-
-    for ($i = 0; $i < $stages; $i++) {
+    for ($i = 0; $i < $stagesCount; $i++) {
         ['question' => $gameQuestion, 'answer' => $gameAnswer] = $generateStep();
 
         line("Question: {$gameQuestion}");

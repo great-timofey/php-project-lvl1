@@ -1,13 +1,14 @@
 <?php
 
 namespace Braingames\Games\Calc;
+use function \Braingames\GameEngine\startGame;
 
 function getGameAttributes()
 {
     $rules = "What is the result of the expression?";
     $operations = ['+' => fn($a, $b) => $a + $b, '-' => fn($a, $b) => $a - $b, '*' => fn($a, $b) => $a * $b];
 
-    $step = function () use ($operations) {
+    $generateStep = function () use ($operations) {
         $firstNumber = rand(1, 10);
         $secondNumber = rand(1, 10);
         $operationsLength = count($operations) - 1;
@@ -15,19 +16,19 @@ function getGameAttributes()
 
         $operand = array_keys($operations)[$randomOperationIndex];
 
-        $closure = $operations[$operand];
+        $calculate = $operations[$operand];
 
         $question = "{$firstNumber} {$operand} {$secondNumber}";
-        $answer = $closure($firstNumber, $secondNumber);
+        $answer = $calculate($firstNumber, $secondNumber);
 
         return ['question' => $question, 'answer' => $answer];
     };
 
-    return ['rules' => $rules, 'step' => $step];
+    return ['rules' => $rules, 'generateStep' => $generateStep];
 }
 
 function run()
 {
     $game = getGameAttributes();
-    \Braingames\GameEngine\startGame($game);
+    startGame($game);
 }

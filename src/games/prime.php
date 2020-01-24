@@ -1,36 +1,39 @@
 <?php
 
 namespace Braingames\Games\Prime;
+use function \Braingames\GameEngine\startGame;
 
 function getGameAttributes()
 {
 
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $step = function () {
-        $number = rand(0, 100);
-        $answer = 'yes';
-        $smallPrimeNumbers = [0, 1];
+    $startPrimeNumbers = [0, 1];
+    $isSmallNonPrimeNumber = fn($num) => in_array($num, $startPrimeNumbers);
 
-        if (in_array($number, $smallPrimeNumbers)) {
-            $answer = 'no';
+    $generateStep = function () use ($isSmallNonPrimeNumber) {
+        $number = rand(0, 100);
+        $isPrime = 'yes';
+
+        if ($isSmallNonPrimeNumber($number)) {
+            $isPrime = 'no';
         } else {
             for ($i = 2; $i < $number; $i++) {
                 if ($number % $i === 0) {
-                    $answer = 'no';
+                    $isPrime = 'no';
                     break;
                 }
             }
         }
 
-        return ['question' => $number, 'answer' => $answer];
+        return ['question' => $number, 'answer' => $isPrime];
     };
 
-    return ['rules' => $rules, 'step' => $step];
+    return ['rules' => $rules, 'generateStep' => $generateStep];
 }
 
 function run()
 {
     $game = getGameAttributes();
-    \Braingames\GameEngine\startGame($game);
+    startGame($game);
 }
